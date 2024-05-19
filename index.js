@@ -1,13 +1,17 @@
 const express = require('express')
 const app = express()
-const port = 3000
+const port = 8080
+const path = require('path')
 
-app.get("/", (req, res)=> {
-    res.send("<h1>Hello World</h1>")
+app.set('view engine', 'ejs')
+app.use(express.static(path.join(__dirname, "views")))
+app.use(express.static(path.join(__dirname, "public")))
+
+app.get('/', (req, res)=> {
+    res.render('home', {title: 'Home Page'})
 })
-
-app.get("/about", (req, res)=> {
-    res.send("About")
+app.get('/header', (req, res)=> {
+    res.render('Header', {title: 'Header Page'})
 })
 
 

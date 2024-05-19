@@ -1,0 +1,16 @@
+header {
+    background-color: rgba(93, 191, 184, .7);
+    margin: 0;
+    padding: 0;
+}
+nav { 
+    display: flex;
+    justify-content:space-around;
+    margin: 0;
+    padding: 0;
+}
+
+nav a{
+   justify-content: center;
+   align-items: center; 
+}
